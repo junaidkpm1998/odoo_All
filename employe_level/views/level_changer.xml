@@ -1,0 +1,18 @@
+<odoo>
+    <record id="employee_level_hike" model="ir.ui.view">
+        <field name="name">hr.employee.custom.form.inherited</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='coach_id']" position="after">
+                <field name="employee_level" string="Employee Level"/>
+                <field name="employee_pm" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//button[@name='429']" position="after">
+                <button name="employee_promote" string="Promote" type="object"
+                        attrs="{'invisible': [('employee_pm','!=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

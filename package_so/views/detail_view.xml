@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="package_bundle_action" model="ir.actions.act_window">
+        <field name="name">Package SO</field>
+        <field name="res_model">bundle.model</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="test" model="ir.ui.view">
+        <field name="name">bundle.model.tree</field>
+        <field name="model">bundle.model</field>
+        <field name="arch" type="xml">
+            <tree string="tree">
+                <field name="product"/>
+                <field name="package"/>
+                <field name="detail_width"/>
+                <field name="detail_height"/>
+                <field name="detail_length"/>
+                <field name="detail_weight"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

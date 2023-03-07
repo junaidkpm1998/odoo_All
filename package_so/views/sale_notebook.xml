@@ -1,0 +1,49 @@
+<!--<odoo>-->
+<!--    <data>-->
+<!--        <record id="sale_xpath_notebook" model="ir.actions.act_window">-->
+<!--            <field name="name">Sale Order</field>-->
+<!--            <field name="res_model">package.model</field>-->
+<!--            <field name="view_mode">tree,form</field>-->
+<!--        </record>-->
+<!--        <record id="course_form_view" model="ir.ui.view">-->
+<!--            <field name="name">package.model.tree</field>-->
+<!--            <field name="model">package.model</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <tree>-->
+<!--                    <notebook>-->
+<!--                        <page string="Package SO">-->
+<!--                            <field name="package"/>-->
+<!--                            <field name="height"/>-->
+<!--                            <field name="width"/>-->
+<!--                            <field name="length"/>-->
+<!--                            <field name="maximum_weight"/>-->
+<!--                        </page>-->
+<!--                    </notebook>-->
+
+<!--                </tree>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="course_tree_view" model="ir.ui.view">-->
+<!--            <field name="name">package.model.form</field>-->
+<!--            <field name="model">package.model</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form>-->
+<!--                    <sheet>-->
+<!--                        <field name="package"/>-->
+<!--                        <notebook>-->
+<!--                            <page string="Other Information">-->
+<!--                                <group>-->
+<!--                                    <field name="height"/>-->
+<!--                                    <field name="width"/>-->
+<!--                                    <field name="length"/>-->
+<!--                                    <field name="maximum_weight"/>-->
+<!--                                </group>-->
+<!--                            </page>-->
+<!--                        </notebook>-->
+<!--                    </sheet>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+
+<!--    </data>-->
+<!--</odoo>-->

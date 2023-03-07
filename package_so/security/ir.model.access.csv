@@ -1,0 +1,4 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_package_model,access_package_model,model_package_model,base.group_user,1,1,1,1
+access_bundle_model,access_bundle_model,model_bundle_model,base.group_user,1,1,1,1
+access_details_model,access_details_model,model_details_model,base.group_user,1,1,1,1

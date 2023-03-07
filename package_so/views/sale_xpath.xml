@@ -1,0 +1,43 @@
+<odoo>
+    <record id="view_sale_order_custom" model="ir.ui.view">
+        <field name="name">sale.order.custom.form.inherited</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="package" string="Package SO" widget="many2many_tags"/>
+            </xpath>
+            <xpath expr="//page[@name='other_information']" position="after">
+                <page string="Package Info" name="Package Info">
+                    <field name="sale_model_values_id">
+                        <tree>
+                            <field name="width" string="width"/>
+                            <field name="height" string="height"/>
+                            <field name="length" string="length"/>
+                            <field name="maximum_weight" string="maximum_weight"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <field name="delivery_done" invisible="1"/>
+
+                <button type="object"
+                        name="open_package_bundle"
+                        class="oe_stat_button"
+                        attrs ="{'invisible': [('delivery_done', '=', True)]}">
+                    <field name="package_count" widget="statinfo" string="Package Bundle"/>
+                </button>
+
+
+            </xpath>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='product_template_id']" position="after">
+                <field name="package_field_id" widget="many2one_tags"/>
+            </xpath>
+
+        </field>
+    </record>
+
+
+</odoo>

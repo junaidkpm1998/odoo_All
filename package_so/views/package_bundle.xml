@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="package_bundle_action" model="ir.actions.act_window">
+        <field name="name">Package SO</field>
+        <field name="res_model">bundle.model</field>
+        <field name="view_mode">kanban,tree</field>
+    </record>
+    <record id="packages" model="ir.ui.view">
+        <field name="name">bundle.model.kanban</field>
+        <field name="model">bundle.model</field>
+        <field name="type">kanban</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" action="data_view" type="object">
+                <field name="sequence_no"/>
+                <field name="partner_id"/>
+
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+
+                            <div class="oe_kanban_details">
+                                <strong class="o_kanban_record_title">
+                                    <field name="sequence_no"/>
+<!--                                    <field name="package"/>-->
+<!--                                    <field name="product"/>-->
+                                </strong>
+                            </div>
+                            <div class="oe_kanban_details">
+                                <field name="partner_id"/>
+                            </div>
+                            <div class="oe_kanban_details">
+                                <field name="order_date"/>
+
+                            </div>
+                            <div class="oe_kanban_details">
+                                <field name="expected_date"/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+
+            </kanban>
+        </field>
+    </record>
+    <record id="test" model="ir.ui.view">
+        <field name="name">bundle.model.tree</field>
+        <field name="model">bundle.model</field>
+        <field name="arch" type="xml">
+            <tree string="tree">
+                <field name="partner_id"/>
+                <field name="sequence_no"/>
+                <field name="expected_date"/>
+                <field name="order_date"/>
+<!--                <field name="product"/>-->
+                <field name="quantity"/>
+            </tree>
+        </field>
+    </record>
+
+
+</odoo>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="employee_level_action" model="ir.actions.act_window">
+            <field name="name">Employee Level</field>
+            <field name="res_model">employee.level</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record model="ir.ui.view" id="course_form_view1">
+            <field name="name">employee.level.form</field>
+            <field name="model">employee.level</field>
+
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="level"/>
+                            <field name="salary"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="test" model="ir.ui.view">
+            <field name="name">employee.level.tree</field>
+            <field name="model">employee.level</field>
+            <field name="arch" type="xml">
+                <tree string="tree">
+                    <field name="level"/>
+                    <field name="salary"/>
+                </tree>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

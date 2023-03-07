@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--        main menu-->
+        <menuitem id="menu_root" name="Employee Level">
+            <menuitem id="employee_level_configuration_menu" name="Configuration">
+                <menuitem id="model_menu_action" action="employee_level_action"/>
+            </menuitem>
+        </menuitem>
+    </data>
+</odoo>

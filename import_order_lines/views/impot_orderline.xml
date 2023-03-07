@@ -1,0 +1,15 @@
+<odoo>
+    <record id="import_sale_orderline" model="ir.ui.view">
+        <field name="name">sale.order.form.import</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form//header//button[@name='action_confirm']" position="after">
+                <button name="import_sale_order" string="Import Order   Line" type="object"/>
+            </xpath>
+            <xpath expr="//form//header//button[@name='import_sale_order']" position="after">
+                <button name="action_merge" string="Merge" type="object"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
